@@ -1,0 +1,1 @@
+Use a sieve to produce all primes under 2000000, then add 'em up.
