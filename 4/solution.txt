@@ -1,0 +1,1 @@
+Brute force solution which visits each pair twice (definitely not optimal, but runs in neglible time).
