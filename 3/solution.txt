@@ -1,0 +1,6 @@
+Uses a loop to find a (not necessarily prime) factorization of the given number. Then use inspection to check if the factorization
+contains any non-prime factors. It turns out that this does give the prime factorization and thus we can choose the largest number
+to submit as our answer.
+
+Note that the number is small enough that we can just go to wolfram alpha to produce the prime factorization for us, if we so
+choose.
