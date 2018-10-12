@@ -1,0 +1,2 @@
+Nothing fancy. Just calculate fibonnaci numbers in sequence, check for even-ness, and add to the running total if the
+number is even.
