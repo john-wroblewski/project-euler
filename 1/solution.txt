@@ -1,0 +1,6 @@
+This problem requires no code. Notice that the solution is can be expressed as follows:
+
+  answer = (sum(3i) i = 1 to 333) + (sum(5i) i = 1 to 199) - (sum(15i) i = 1 to 66)
+         = 3 * 1/2 * 333 * 334 + 5 * 1/2 * 199 * 200 - 15 * 1/2 * 66 * 67 = 233168.
+         
+Here we utilize the well-known formula for triangle numbers.
