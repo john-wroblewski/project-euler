@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define	LENGTHOFHUNDRED		7
+#define LENGTHOFHUNDRED		7
 #define LENGTHOFONETHOUSAND	11
 #define NUMSTART		1
 #define NUMEND			1000
