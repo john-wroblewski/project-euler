@@ -1,0 +1,2 @@
+The answer can be interpreted as the number of binary strings with exactly 20 one's and exactly 20 zero's. Thus
+the answer is 40 choose 20.
