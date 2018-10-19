@@ -1,0 +1,1 @@
+Use the "elementary school method" to track digits of the sum.
