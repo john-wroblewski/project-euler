@@ -1,0 +1,2 @@
+Instead of using the definition of the choose function to calculate values, we make use of a recurrence relation and a
+lookup table of previous function values.
