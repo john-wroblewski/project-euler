@@ -1,0 +1,1 @@
+Calculates the possible magic 5-gon rings, and the "user" must find the optimal choice from the roughly 20 or so options.
