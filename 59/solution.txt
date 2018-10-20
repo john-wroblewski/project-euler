@@ -1,0 +1,1 @@
+Uses frequency analysis to find the key. The score function uses the average number of top ten most frequent english letters.
