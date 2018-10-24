@@ -1,5 +1,5 @@
 Here I use a generating function. Note that the answer is the number of non-negative integral solutions
-of the equation:  e_1 + 2e_2 + 5e_3 + 10e_4 + 20e_5 + 50e_6 + 100e_7 + 200e_8 = n.
+of the equation:  e_1 + 2e_2 + 5e_3 + 10e_4 + 20e_5 + 50e_6 + 100e_7 + 200e_8 = 200.
 
 Then using the example on page 221 of "Introductory Combinatorics" by Brualdi as a hint, we see that the
 generating function for the above equation is:
