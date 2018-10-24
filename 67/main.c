@@ -28,8 +28,6 @@ int main(int argc, char *argv[]){
     exit(EXIT_FAILURE);
   }
 
-  memset((void *)set, 0, 5050 * sizeof(unsigned int));
-
   unsigned int i = 0;
 
   while(fscanf(data_file, "%u ", T+i) != EOF)
