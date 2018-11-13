@@ -1,0 +1,58 @@
+#!/usr/bin/python
+
+import csv
+
+a = []
+row_size = 0
+col_size = 0
+
+with open('p082_matrix.txt') as csv_file:
+   csv_reader = csv.reader(csv_file, delimiter = ',')
+
+   for row in csv_reader:
+      col_size = col_size + 1
+      int_row = [int(i) for i in row]
+      a.append(int_row)
+
+row_size = len(a[0]) - 1
+col_size = col_size - 1
+
+M = [[0 for x in range(row_size + 1)] for y in range(col_size + 1)]
+
+def opt(flag, x, y):
+
+   if M[x][y] > 0:
+      return M[x][y]
+
+   if y == row_size:
+      return a[x][y]
+
+   if y == 0:
+      M[x][y] = a[x][y] + opt('right', x, y + 1)
+      return M[x][y]
+
+   if x == 0:
+      if flag == 'right':
+         M[x][y] = a[x][y] + min(opt('right', x, y + 1), opt('down', x + 1, y))
+         return M[x][y]
+      return a[x][y] + opt('right', x, y + 1)
+
+   if x == col_size:
+      if flag == 'right':
+         M[x][y] = a[x][y] + min(opt('right', x, y + 1), opt('up', x - 1, y))
+         return M[x][y]
+      return a[x][y] + opt('right', x, y + 1)
+
+   if flag == 'right':
+      M[x][y] = a[x][y] + min(opt('up', x - 1, y), opt('right', x, y + 1), opt('down', x + 1, y))
+      return M[x][y]
+   if flag == 'up':
+      return a[x][y] + min(opt('up', x - 1, y), opt('right', x, y + 1))
+   return a[x][y] + min(opt('right', x, y + 1), opt('down', x + 1, y))
+
+S = []
+for x in range(0, col_size):
+   S.append(opt('right', x, 0))
+
+minimal = min([x for x in S])
+print(minimal)
