@@ -1,0 +1,44 @@
+#!/usr/bin/python
+
+import csv
+
+a = []
+row_size = 0
+col_size = 0
+
+with open('p081_matrix.txt') as csv_file:
+   csv_reader = csv.reader(csv_file, delimiter = ',')
+
+   for row in csv_reader:
+      col_size = col_size + 1
+      int_row = [int(i) for i in row]
+      a.append(int_row)
+
+row_size = len(a[0]) - 1
+col_size = col_size - 1
+
+M = [[0 for x in range(row_size + 1)] for y in range(col_size + 1)]
+
+def opt(x, y):
+
+   if M[x][y] > 0:
+      return M[x][y]
+
+   if x == col_size:
+      if y == row_size:
+        return a[x][y]
+
+      M[x][y] = a[x][y] + opt(x, y + 1)
+      return M[x][y]
+
+   if y == row_size:
+      M[x][y] = a[x][y] + opt(x + 1, y)
+      return M[x][y]
+
+   M[x][y] = a[x][y] + min(opt(x + 1, y), opt(x, y + 1))
+   return M[x][y]
+
+
+minimal = opt(0,0)
+
+print(minimal)
