@@ -1,0 +1,2 @@
+If we have a grid of size m by n, the number of rectangles is counted by m*n*(m+1)*(n+1)/4. This is better
+understood as (m+1 choose 2) * (n+1 choose 2).
