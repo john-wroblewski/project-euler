@@ -1,1 +1,1 @@
-Recursive function using dynamic programming. Similar approach to 81, but we use another parameter to prevent baacktracking. 
+Recursive function using dynamic programming. Similar approach to 81, but we use another parameter to prevent backtracking. 
