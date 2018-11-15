@@ -45,24 +45,15 @@ unsigned int ways_to_make_change(unsigned int n, unsigned int c)
   if(M[n][coin_val_to_index(c)])
     return M[n][coin_val_to_index(c)];
 
-  unsigned int N = n / c;
-  unsigned int i, count = 0;
+  unsigned count = 0;
   unsigned int u = next_less_coin(c);
-
-  for(i = 0;i < UNIT;i++)
-    M[i][0] = 1;
-
-  for(i = 0;i < COIN_COUNT;i++)
-    M[0][i] = 1;
-
-  unsigned int temp;
-
-  for(i = 0;i <= N;i++)
-  {
-    temp = ways_to_make_change(n - i * c, u);
-    M[n - i * c][coin_val_to_index(u)] = temp;
-    count += temp;
-  }
-
+  
+  if(n < c)
+    return ways_to_make_change(n, u);
+  
+  count += ways_to_make_change(n, u);
+  count += ways_to_make_change(n - c, c);
+  M[n][coin_val_to_index(c)] = count;
+  
   return count;
 }
